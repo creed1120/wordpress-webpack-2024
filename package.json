@@ -24,8 +24,6 @@
 	"devDependencies": {
 		"@wordpress/scripts": "^26.11.0",
 		"path": "^0.12.7",
-		"webpack-remove-empty-scripts": "^1.0.3",
-		"webpack-watch-external-files-plugin": "^3.0.0",
-		"webpack-watch-files-plugin": "^1.2.1"
+		"webpack-remove-empty-scripts": "^1.0.3"
 	}
 }
