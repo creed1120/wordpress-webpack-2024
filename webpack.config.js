@@ -8,7 +8,7 @@ module.exports = {
 	...{
 		mode: "production",
 		devServer: {
-			watchFiles: ['./*', './assets/main.scss'],
+			watchFiles: ['./**/*', './*', './assets/main.scss'],
 			static: {
 				directory: path.join(__dirname, "assets"),
 			},

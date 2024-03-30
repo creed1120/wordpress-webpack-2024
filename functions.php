@@ -218,8 +218,11 @@ if ( ! function_exists( 'themes_starter_content_nav' ) ) {
 		if ( $wp_query->max_num_pages > 1 ) {
 			?>
 			<div id="<?php echo esc_attr( $nav_id ); ?>" class="d-flex mb-4 justify-content-between">
+				
 				<div><?php next_posts_link( '<span aria-hidden="true">&larr;</span> ' . esc_html__( 'Older posts', 'my-theme' ) ); ?></div>
+
 				<div><?php previous_posts_link( esc_html__( 'Newer posts', 'my-theme' ) . ' <span aria-hidden="true">&rarr;</span>' ); ?></div>
+
 			</div><!-- /.d-flex -->
 			<?php
 		} else {
@@ -235,7 +238,7 @@ if ( ! function_exists( 'themes_starter_content_nav' ) ) {
 	 * @return string
 	 */
 	function posts_link_attributes() {
-		return 'class="btn btn-secondary btn-lg"';
+		return 'class="btn btn-primary btn-sm"';
 	}
 	add_filter( 'next_posts_link_attributes', 'posts_link_attributes' );
 	add_filter( 'previous_posts_link_attributes', 'posts_link_attributes' );

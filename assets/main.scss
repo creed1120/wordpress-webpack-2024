@@ -13,7 +13,7 @@
 // 2. Include any default variable overrides here
 
 // Options
-$enable-dark-mode: false;
+$enable-dark-mode: true;
 $enable-rounded: true;
 $enable-shadows: true;
 $enable-gradients: true;
@@ -69,7 +69,7 @@ $link-decoration: none;
 @import '../node_modules/bootstrap/scss/variables-dark';
 
 // 4. Include any default map overrides here
-$primary: $green; // set the $primary variable
+$primary: $blue; // set the $primary variable
 
 // merge with existing $theme-colors map
 $theme-colors: map-merge($theme-colors, (
@@ -113,6 +113,9 @@ $theme-colors: map-merge($theme-colors, (
 @import '../node_modules/bootstrap/scss/spinners';
 @import '../node_modules/bootstrap/scss/offcanvas';
 @import '../node_modules/bootstrap/scss/helpers';
+// Bootstrap 5 Icons
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import '../node_modules/bootstrap/scss/utilities/api';
@@ -122,7 +125,14 @@ $theme-colors: map-merge($theme-colors, (
  */
 
 body {
-	background-color: rgb(0, 255, 221);
+	.bi::before {
+		display: inline-block;
+		content: "";
+		vertical-align: -.125em;
+		background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+		background-repeat: no-repeat;
+		background-size: 1rem 1rem;
+	  }
 	&.page-template-page-full {
 		#main {
 			max-width: 100%;

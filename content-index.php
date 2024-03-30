@@ -44,9 +44,10 @@
 				<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . esc_html__( 'Pages:', 'my-theme' ) . '</span>', 'after' => '</div>' ) ); ?>
 			</div><!-- /.card-text -->
 			<footer class="entry-meta">
-				<a href="<?php echo get_the_permalink(); ?>" class="btn btn-outline-secondary"><?php esc_html_e( 'more', 'my-theme' ); ?></a>
+				<a href="<?php echo get_the_permalink(); ?>" class="btn btn-primary"><?php esc_html_e( 'learn more', 'my-theme' ); ?></a>
 			</footer><!-- /.entry-meta -->
 
 		</div><!-- /.card-body -->
 	</div><!-- /.col -->
+	
 </article><!-- /#post-<?php the_ID(); ?> -->
