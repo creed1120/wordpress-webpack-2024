@@ -44,7 +44,7 @@ $gray-800: #343a40;
 $gray-900: #212529;
 
 // Color vars
-$blue: #0d6efd;
+$blue: #072757;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
@@ -69,6 +69,12 @@ $link-decoration: none;
 @import '../node_modules/bootstrap/scss/variables-dark';
 
 // 4. Include any default map overrides here
+$primary: $green; // set the $primary variable
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary
+));
 
 // 5. Include remainder of required parts
 @import '../node_modules/bootstrap/scss/maps';
@@ -116,6 +122,7 @@ $link-decoration: none;
  */
 
 body {
+	background-color: rgb(0, 255, 221);
 	&.page-template-page-full {
 		#main {
 			max-width: 100%;
@@ -149,6 +156,11 @@ img {
 /**
  * WordPress customization
  */
+
+ /* Admin */
+ .edit-post-visual-editor iframe body {
+	font-family: sans-serif !important;
+ }
 
 /* WordPress Embeds */
 
