@@ -69,12 +69,21 @@ $link-decoration: none;
 @import '../node_modules/bootstrap/scss/variables-dark';
 
 // 4. Include any default map overrides here
-$primary: $blue; // set the $primary variable
+$primary: $purple; // set the $primary variable
+$secondary: $orange; // set the $secondary variable
 
 // merge with existing $theme-colors map
 $theme-colors: map-merge($theme-colors, (
-  "primary": $primary
+  "primary": $primary,
+  "secondary": $secondary
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark
 ));
+
 
 // 5. Include remainder of required parts
 @import '../node_modules/bootstrap/scss/maps';
